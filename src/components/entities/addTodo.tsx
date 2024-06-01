@@ -14,7 +14,7 @@ const AddTodo: React.FC<AddTodoProps> = ({ onAddButtonClick }) => {
 
     const handleAddButtonClick = () => {
         if (todo_title.trim() !== '') {
-            const newTodo = { title: todo_title, content: todo_content, status: '0' };
+            const newTodo = { title: todo_title, content: todo_content, status: false };
             onAddButtonClick(newTodo);
             setTodoTitle('');
             setTodoContent('');

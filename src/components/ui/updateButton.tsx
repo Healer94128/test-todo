@@ -1,8 +1,14 @@
-import {UPDATE} from '@/constant'
+import React, {MouseEvent} from 'react';
 
-const UpdateButton = () => {
+import {UPDATE} from '@/constant';
+
+interface UpdateButtonProps {
+    onUpdateButtonClick: (event: MouseEvent<HTMLDivElement>) => void;
+}
+
+const UpdateButton: React.FC<UpdateButtonProps> = ({onUpdateButtonClick}) => {
     return(
-        <div className="flex justify-center items-center w-[62px] h-8 bg-green m-auto rounded-[10px]">
+        <div className="flex justify-center items-center w-[62px] h-8 bg-green m-auto rounded-[10px] cursor-pointer" onClick={onUpdateButtonClick}>
             <span className='text-white'>{UPDATE}</span>
         </div>
     );

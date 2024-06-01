@@ -11,6 +11,16 @@ const BodyLayout = () => {
     setTodos([...todos, newTodo]);
   };
 
+  const handleUpdateButtonClick = (index: number) => {
+    const updatedTodos = [...todos];
+    if (updatedTodos[index].status === false)
+      updatedTodos[index].status = true;
+    else
+      updatedTodos[index].status = false;
+   
+    setTodos(updatedTodos);
+  }
+
   const handleDeleteButtonClick = (index: number) => {
     const updatedTodos = [...todos];
     updatedTodos.splice(index, 1);
@@ -20,7 +30,7 @@ const BodyLayout = () => {
   return (
     <div className="flex flex-col gap-[102px]">
       <AddTodo onAddButtonClick={handleAddButtonClick} />
-      <TodoList todos={todos} onDeleteTodoList={handleDeleteButtonClick} />
+      <TodoList todos={todos} onUpdateTodoList={handleUpdateButtonClick} onDeleteTodoList={handleDeleteButtonClick} />
     </div>
   )
 }
