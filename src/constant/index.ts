@@ -1,0 +1,9 @@
+export const title = 'My Tasks';
+export const list = 'LIST';
+export const add = 'Add';
+export const update = '更新';
+export const remove = '削除';
+export const finish = '完了';
+export const unfinish = '未完了';
+export const todo_title = 'タイトル';
+export const todo_content = '内容';
