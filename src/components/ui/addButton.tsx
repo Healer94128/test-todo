@@ -1,9 +1,18 @@
-import { add } from '@/constant'
+import React, { MouseEvent } from 'react';
 
-const AddButton = () => {
+import { ADD } from '@/constant';
+
+interface AddButtonProps {
+    onAddButtonClick: (event: MouseEvent<HTMLDivElement>) => void;
+}
+
+const AddButton: React.FC<AddButtonProps> = ({ onAddButtonClick }) => {
     return (
-        <div className="w-[280px] h-10 rounded-[10px] bg-green m-auto">
-            <span className='font-normal text-white leading-[22px] font-noto-sans'>{add}</span>
+        <div
+            className="flex justify-center items-center w-[280px] h-10 rounded-[10px] bg-green m-auto cursor-pointer"
+            onClick={onAddButtonClick}
+        >
+            <span className='font-normal text-white leading-[22px]'>{ADD}</span>
         </div>
     );
 };

@@ -1,9 +1,9 @@
-import {update} from '@/constant'
+import {UPDATE} from '@/constant'
 
 const UpdateButton = () => {
     return(
-        <div className="w-[62px] h-8 bg-grey-500">
-            <span className='text-white'>{update}</span>
+        <div className="flex justify-center items-center w-[62px] h-8 bg-green m-auto rounded-[10px]">
+            <span className='text-white'>{UPDATE}</span>
         </div>
     );
 }
